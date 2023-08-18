@@ -7,7 +7,7 @@ def load_and_prepare_image(img_path, target_size=(224, 224)):
     img = image.load_img(img_path, target_size=target_size)
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
-    img_array /= 255.  # Assuming you normalized the images during training
+    img_array /= 255.
     return img_array
 
 def predict_face(model, img_array):
